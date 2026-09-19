@@ -1,0 +1,12 @@
+# Normalize line endings in the repository so a stray CR can never reach GitHub.
+# Markdown tables break when a line ends with "\r\r\n": GitHub renders the extra
+# CR as a line break, so every row becomes its own paragraph.
+* text=auto eol=lf
+
+*.ico binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.exe binary
+*.zip binary
+*.ttf binary
