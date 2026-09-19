@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>CampusPass</RootNamespace>
+    <AssemblyName>CampusPass</AssemblyName>
+    <StartupObject>CampusPass.Program</StartupObject>
+
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\CampusPass.ico</ApplicationIcon>
+
+    <AssemblyTitle>CampusPass</AssemblyTitle>
+    <Product>CampusPass</Product>
+    <!-- Must stay distinct from the legacy 1314.5.2.0 build: the migration
+         tests compare FileVersion to tell the old exe from the new one. -->
+    <Version>1314.6.0.0</Version>
+    <FileVersion>1314.6.0.0</FileVersion>
+    <AssemblyVersion>1314.6.0.0</AssemblyVersion>
+
+    <SatelliteResourceLanguages>zh-Hans;en</SatelliteResourceLanguages>
+    <DebugType>embedded</DebugType>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <PublishTrimmed>false</PublishTrimmed>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\CampusPass.ico" />
+    <Resource Include="Assets\CampusPass.png" />
+    <PackageReference Include="WPF-UI" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

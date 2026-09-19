@@ -1,0 +1,19 @@
+<svg width="206" height="206" viewBox="0 0 206 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="206" height="206" rx="52" fill="#F3F3F3"/>
+
+  <g stroke="#0F0D0C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Minimal campus / building outline -->
+    <path d="M55 91L103 57L151 91"/>
+    <path d="M63 88V151H84"/>
+    <path d="M143 88V151H122"/>
+
+    <!-- Wi-Fi -->
+    <path d="M79 101C92 89 114 89 127 101"/>
+    <path d="M87 112C96 104 110 104 119 112"/>
+    <path d="M96 123C100 119 106 119 110 123"/>
+
+    <!-- Door / pass -->
+    <path d="M84 151V143C84 132.5 92.5 124 103 124C113.5 124 122 132.5 122 143V151"/>
+    <path d="M94 141L101 148L114 134"/>
+  </g>
+</svg>

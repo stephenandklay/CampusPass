@@ -1,0 +1,24 @@
+# Build output: dotnet intermediates and the published binaries.
+# outputs/ is deliberately ignored in full - CampusPass.exe is ~146 MB, which is
+# over GitHub's 100 MB per-file hard limit, so releases ship as Release assets
+# (tools/build.ps1 regenerates the whole directory).
+bin/
+obj/
+app/publish/
+outputs/
+
+# Local-only artefacts
+*.user
+*.suo
+*.log
+__pycache__/
+
+# Never commit anything that could hold a real account, even though the app
+# keeps its own config under %LocalAppData% and not here.
+config.json
+credentials.json
+credentials.dat
+settings.xml
+
+# Legacy WinForms rollback build (work/Build-CampusAutoLogin.ps1)
+work/*.exe

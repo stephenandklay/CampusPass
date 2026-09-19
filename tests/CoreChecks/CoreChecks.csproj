@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Compiles the Core sources directly rather than referencing the app project,
+       so the checks exercise exactly the files the shipped exe is built from and
+       can reach their internal members. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>CampusPass</RootNamespace>
+    <AssemblyName>CampusPass.CoreChecks</AssemblyName>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <StartupObject>CoreTest</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="CoreChecks.cs" />
+    <Compile Include="..\..\app\src\CampusPass\Core\PortalSettings.cs" />
+    <Compile Include="..\..\app\src\CampusPass\Core\AppData.cs" />
+    <Compile Include="..\..\app\src\CampusPass\Core\LogTail.cs" />
+    <Compile Include="..\..\app\src\CampusPass\Core\PortalClient.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
